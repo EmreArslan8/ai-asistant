@@ -146,6 +146,11 @@ function dosyaSun(res, dosyaYolu) {
     ".html": "text/html; charset=utf-8",
     ".js": "application/javascript",
     ".css": "text/css",
+    ".svg": "image/svg+xml",
+    ".json": "application/json",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".ico": "image/x-icon",
   };
   fs.readFile(dosyaYolu, (err, data) => {
     if (err) {
