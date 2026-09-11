@@ -1,0 +1,9 @@
+{
+  "name": "ai-bilgi-asistani",
+  "version": "1.0.0",
+  "description": "Bilgi ekleme + ChatGPT ile bilgiye dayali cevap verme prototipi",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

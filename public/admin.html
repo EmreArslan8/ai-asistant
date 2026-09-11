@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr"><head><script>try{if(localStorage.getItem("ba_tema")==="light"){document.documentElement.classList.remove("dark");}}catch(e){}</script><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Yönetim Paneli — Bilgi Asistanı</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+:root{--c-on-primary:255 255 255;--c-inverse-on-surface:240 242 248;--c-on-primary-fixed-variant:47 46 190;--c-on-secondary:60 0 145;--c-surface-bright:255 255 255;--c-on-error:105 0 5;--c-on-primary-container:13 0 150;--c-tertiary-fixed:72 62 205;--c-tertiary:72 62 205;--c-primary-container:128 131 255;--c-surface:255 255 255;--c-on-tertiary:29 0 165;--c-on-secondary-fixed:35 0 92;--c-on-tertiary-fixed:15 0 105;--c-on-surface-variant:86 97 126;--c-inverse-surface:17 23 40;--c-tertiary-fixed-dim:99 102 241;--c-outline:136 146 170;--c-primary-fixed-dim:84 90 222;--c-surface-dim:242 244 249;--c-surface-variant:224 229 239;--c-secondary:109 40 217;--c-on-primary-fixed:7 0 108;--c-on-tertiary-fixed-variant:51 35 204;--c-secondary-container:87 27 193;--c-primary:56 62 198;--c-surface-tint:192 193 255;--c-secondary-fixed:109 40 217;--c-on-error-container:255 218 214;--c-on-background:17 23 40;--c-primary-fixed:62 62 178;--c-outline-variant:210 216 229;--c-surface-container-highest:217 223 234;--c-on-secondary-fixed-variant:85 22 190;--c-surface-container-low:255 255 255;--c-secondary-fixed-dim:124 58 237;--c-tertiary-container:133 130 255;--c-error:198 30 60;--c-error-container:147 0 10;--c-surface-container-lowest:233 236 243;--c-background:242 244 249;--c-surface-container-high:230 235 243;--c-inverse-primary:73 75 214;--c-on-tertiary-container:24 0 146;--c-on-secondary-container:196 171 255;--c-on-surface:17 23 40;--c-surface-container:240 243 249;}html.dark{--c-on-primary:16 0 169;--c-inverse-on-surface:44 48 58;--c-on-primary-fixed-variant:47 46 190;--c-on-secondary:60 0 145;--c-surface-bright:53 57 67;--c-on-error:105 0 5;--c-on-primary-container:13 0 150;--c-tertiary-fixed:226 223 255;--c-tertiary:195 192 255;--c-primary-container:128 131 255;--c-surface:15 19 28;--c-on-tertiary:29 0 165;--c-on-secondary-fixed:35 0 92;--c-on-tertiary-fixed:15 0 105;--c-on-surface-variant:199 196 215;--c-inverse-surface:223 226 239;--c-tertiary-fixed-dim:195 192 255;--c-outline:144 143 160;--c-primary-fixed-dim:192 193 255;--c-surface-dim:15 19 28;--c-surface-variant:49 53 63;--c-secondary:208 188 255;--c-on-primary-fixed:7 0 108;--c-on-tertiary-fixed-variant:51 35 204;--c-secondary-container:87 27 193;--c-primary:192 193 255;--c-surface-tint:192 193 255;--c-secondary-fixed:233 221 255;--c-on-error-container:255 218 214;--c-on-background:223 226 239;--c-primary-fixed:225 224 255;--c-outline-variant:70 69 84;--c-surface-container-highest:49 53 63;--c-on-secondary-fixed-variant:85 22 190;--c-surface-container-low:24 27 37;--c-secondary-fixed-dim:208 188 255;--c-tertiary-container:133 130 255;--c-error:255 180 171;--c-error-container:147 0 10;--c-surface-container-lowest:10 14 23;--c-background:15 19 28;--c-surface-container-high:38 42 52;--c-inverse-primary:73 75 214;--c-on-tertiary-container:24 0 146;--c-on-secondary-container:196 171 255;--c-on-surface:223 226 239;--c-surface-container:28 31 41;}.kurumsal{background-color:#1d4ed8!important;background-image:none!important;color:#fff!important;}.kurumsal *{color:#fff!important;}#noktaZemin{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.msg-in{animation:msgIn .3s cubic-bezier(.2,.9,.3,1.15) both;}
+@keyframes msgIn{from{opacity:0;transform:translateY(10px);}}
+.yaziyor i{width:7px;height:7px;border-radius:50%;background:#c0c1ff;display:inline-block;animation:yaz 1.1s infinite;}
+.yaziyor i:nth-child(2){animation-delay:.18s;}.yaziyor i:nth-child(3){animation-delay:.36s;}
+@keyframes yaz{30%{transform:translateY(-5px);}}
+.toast-goster{transform:translateX(-50%) translateY(0)!important;opacity:1!important;}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary":"rgb(var(--c-on-primary) / <alpha-value>)","inverse-on-surface":"rgb(var(--c-inverse-on-surface) / <alpha-value>)","on-primary-fixed-variant":"rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)","on-secondary":"rgb(var(--c-on-secondary) / <alpha-value>)","surface-bright":"rgb(var(--c-surface-bright) / <alpha-value>)","on-error":"rgb(var(--c-on-error) / <alpha-value>)","on-primary-container":"rgb(var(--c-on-primary-container) / <alpha-value>)","tertiary-fixed":"rgb(var(--c-tertiary-fixed) / <alpha-value>)","tertiary":"rgb(var(--c-tertiary) / <alpha-value>)","primary-container":"rgb(var(--c-primary-container) / <alpha-value>)","surface":"rgb(var(--c-surface) / <alpha-value>)","on-tertiary":"rgb(var(--c-on-tertiary) / <alpha-value>)","on-secondary-fixed":"rgb(var(--c-on-secondary-fixed) / <alpha-value>)","on-tertiary-fixed":"rgb(var(--c-on-tertiary-fixed) / <alpha-value>)","on-surface-variant":"rgb(var(--c-on-surface-variant) / <alpha-value>)","inverse-surface":"rgb(var(--c-inverse-surface) / <alpha-value>)","tertiary-fixed-dim":"rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)","outline":"rgb(var(--c-outline) / <alpha-value>)","primary-fixed-dim":"rgb(var(--c-primary-fixed-dim) / <alpha-value>)","surface-dim":"rgb(var(--c-surface-dim) / <alpha-value>)","surface-variant":"rgb(var(--c-surface-variant) / <alpha-value>)","secondary":"rgb(var(--c-secondary) / <alpha-value>)","on-primary-fixed":"rgb(var(--c-on-primary-fixed) / <alpha-value>)","on-tertiary-fixed-variant":"rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)","secondary-container":"rgb(var(--c-secondary-container) / <alpha-value>)","primary":"rgb(var(--c-primary) / <alpha-value>)","surface-tint":"rgb(var(--c-surface-tint) / <alpha-value>)","secondary-fixed":"rgb(var(--c-secondary-fixed) / <alpha-value>)","on-error-container":"rgb(var(--c-on-error-container) / <alpha-value>)","on-background":"rgb(var(--c-on-background) / <alpha-value>)","primary-fixed":"rgb(var(--c-primary-fixed) / <alpha-value>)","outline-variant":"rgb(var(--c-outline-variant) / <alpha-value>)","surface-container-highest":"rgb(var(--c-surface-container-highest) / <alpha-value>)","on-secondary-fixed-variant":"rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)","surface-container-low":"rgb(var(--c-surface-container-low) / <alpha-value>)","secondary-fixed-dim":"rgb(var(--c-secondary-fixed-dim) / <alpha-value>)","tertiary-container":"rgb(var(--c-tertiary-container) / <alpha-value>)","error":"rgb(var(--c-error) / <alpha-value>)","error-container":"rgb(var(--c-error-container) / <alpha-value>)","surface-container-lowest":"rgb(var(--c-surface-container-lowest) / <alpha-value>)","background":"rgb(var(--c-background) / <alpha-value>)","surface-container-high":"rgb(var(--c-surface-container-high) / <alpha-value>)","inverse-primary":"rgb(var(--c-inverse-primary) / <alpha-value>)","on-tertiary-container":"rgb(var(--c-on-tertiary-container) / <alpha-value>)","on-secondary-container":"rgb(var(--c-on-secondary-container) / <alpha-value>)","on-surface":"rgb(var(--c-on-surface) / <alpha-value>)","surface-container":"rgb(var(--c-surface-container) / <alpha-value>)"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","gutter-mobile":"0.75rem","margin-mobile":"1rem","space-md":"1rem","space-xs":"0.25rem"},"fontFamily":{"code-md":["JetBrains Mono"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"code-md":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script><script src="/icons.js" defer></script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><canvas id="noktaZemin"></canvas><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low/90 backdrop-blur-2xl z-40 hidden md:flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-hidden"><div class="p-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="h-8 w-8 rounded-lg kurumsal flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">smart_toy</span></div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Bilgi Asistanı</span><span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm">Panel</span></div></div><nav class="flex-1 overflow-y-auto px-space-sm space-y-1 py-space-sm">
+<div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline">Yönetim</div>
+<a onclick="bolumeGit('ust')" class="flex items-center gap-2.5 px-3 py-2 rounded-lg cursor-pointer bg-surface-container-high text-on-surface font-semibold"><span class="material-symbols-outlined text-primary text-[18px]">layout_dashboard</span><span class="font-body-md text-body-md">Genel Bakış</span></a>
+<a onclick="bolumeGit('liste')" class="flex items-center gap-2.5 px-3 py-2 rounded-lg cursor-pointer text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">database</span><span class="font-body-md text-body-md">Bilgi Bankası</span><span id="menuSayi" class="ml-auto px-2 py-0.5 rounded-full bg-surface-container-highest font-label-sm text-label-sm">0</span></a>
+<a onclick="bolumeGit('test')" class="flex items-center gap-2.5 px-3 py-2 rounded-lg cursor-pointer text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">flask_conical</span><span class="font-body-md text-body-md">Asistanı Dene</span></a>
+<div class="px-3 py-1 pt-3 font-label-sm text-label-sm uppercase tracking-wider text-outline">Site</div>
+<a href="/" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">globe</span><span class="font-body-md text-body-md">Siteyi Görüntüle</span></a>
+<a href="/" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-body-md text-body-md">Sohbeti Aç</span></a>
+</nav></div><div class="p-space-md space-y-3 bg-surface-container-lowest/40 backdrop-blur-md"><div class="p-2.5 rounded-xl bg-surface-container/60 space-y-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase">Bilgi Bankası</span><span class="material-symbols-outlined text-secondary text-[16px]">database</span></div><div id="bilgiSayi" class="font-label-md text-label-md text-on-surface">— kayıt</div></div><div class="pt-1 flex items-center justify-between"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full kurumsal flex items-center justify-center font-headline-sm text-headline-sm text-on-primary">Y</div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">Yönetici</span><span id="modDurum" class="font-label-sm text-label-sm text-tertiary">Çevrimiçi</span></div></div></div></div></aside><div class="md:pl-72 flex flex-col min-h-screen relative z-10"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-30 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[20px]">settings</span><span class="font-headline-sm text-headline-sm text-on-surface">Asistan Yönetimi</span></div><div class="h-4 w-px bg-outline-variant/40 hidden sm:block"></div><div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span id="baslikModel">Yayında</span></div></div><div class="flex items-center gap-space-sm"><button onclick="temaDegistir()" aria-label="Tema değiştir" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button"><span id="temaIkon" class="material-symbols-outlined text-[18px]">light_mode</span></button><a href="/" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[18px]">visibility</span><span class="hidden sm:inline">Siteyi Gör</span></a></div></header><main class="relative pt-16 flex-1 w-full"><div class="flex flex-col w-full"><div id="ust" class="max-w-7xl mx-auto w-full px-margin py-space-md space-y-space-lg"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded-xl shadow-sm border-t border-surface-container-high/40"><div><div class="flex items-center gap-2 mb-1"><h1 class="font-headline-md text-headline-md text-on-surface">Yapay Zeka Asistan Yönetimi</h1><span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>Yayında</span></div><p class="font-body-md text-body-md text-on-surface-variant">Web sitenizdeki asistanın bilmesi gereken bilgileri ekleyin ve nasıl cevap verdiğini anında test edin.</p></div><div class="flex items-center gap-space-md"><div class="px-3 py-2 rounded-lg bg-surface-container-high font-label-md text-label-md text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">database</span><span id="ustSayi">0 kayıt</span></div></div></div><div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start"><div class="xl:col-span-7 space-y-space-md"><div class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl p-space-md shadow-sm space-y-space-md border-t border-surface-container-high/40"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">edit_note</span></div><div><h2 class="font-headline-sm text-headline-sm text-on-surface">1. Asistanın Ne Bilmesini İstiyorsunuz?</h2><p class="font-body-sm text-body-sm text-on-surface-variant">Müşterilerinizin sık sorduğu soruları veya şirket bilgilerinizi girin.</p></div></div></div><div class="flex items-center gap-2 border-b border-surface-container-high/40 pb-2">
+<button id="sekmeMetin" onclick="modDegistir('metin')" class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">notes</span>Metin Olarak Yaz</button>
+<button id="sekmeSoru" onclick="modDegistir('soru')" class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">quiz</span>Soru &amp; Cevap Ekle</button>
+</div><div class="space-y-space-sm">
+<div id="soruAlani" class="hidden"><label class="block font-label-md text-label-md text-on-surface mb-1">Müşterinin Soracağı Soru</label><input id="soruBaslik" class="w-full bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Örn: Kargo kaç günde gelir?" type="text"/></div>
+<div><label id="aciklamaEtiket" class="block font-label-md text-label-md text-on-surface mb-1">Bilgi veya Açıklama</label><textarea id="bilgiMetin" class="w-full bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md p-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-inner resize-none leading-relaxed" placeholder="Asistanın müşterilerinize aktarmasını istediğiniz bilgiyi doğal bir dille buraya yazın..." rows="4"></textarea></div>
+<div class="flex items-center justify-between pt-1"><span id="formIpucu" class="font-body-sm text-body-sm text-outline">Bu bilgi kaydedildiğinde asistan tarafından anında öğrenilir.</span><button id="ekleBtn" onclick="kaydet()" class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-all flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span id="ekleBtnYazi">Bu Bilgiyi Ekle</span></button></div></div></div>
+<div id="liste" class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl p-space-md shadow-sm space-y-space-md border-t border-surface-container-high/40"><div class="flex items-center justify-between"><h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[20px]">menu_book</span><span id="listeBaslik">Asistanın Bildiği Konular</span></h3><span id="listeSayi" class="font-body-sm text-body-sm text-on-surface-variant"></span></div>
+<div class="relative"><span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span><input id="arama" oninput="listele()" class="w-full bg-surface-container-lowest/90 text-on-surface font-body-md text-body-md pl-10 pr-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" placeholder="Kayıtlarda ara…" type="text"/></div>
+<div id="kayitlar" class="space-y-2"></div>
+<div class="p-3 rounded-xl bg-surface-container-lowest/80 border-t border-surface-container-high/40 flex items-start justify-between gap-space-md"><div class="space-y-0.5"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-md text-label-md text-on-surface font-semibold">Yalnızca Eklediğim Bilgileri Kullansın</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Asistan tahmin yürütmez; bilmediği soruda bunu açıkça söyler.</p></div><input checked disabled class="w-5 h-5 mt-1 rounded text-primary accent-primary" type="checkbox" title="Her zaman aktif"/></div></div></div>
+<div class="xl:col-span-5 space-y-space-md"><div id="test" class="bg-surface-container-low/90 backdrop-blur-xl rounded-xl p-space-md shadow-sm space-y-space-md border-t border-surface-container-high/40"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg kurumsal flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[18px]">chat</span></div><div><h2 class="font-headline-sm text-headline-sm text-on-surface">2. Asistanı Test Edin</h2><p class="font-body-sm text-body-sm text-on-surface-variant">Sitenize gelen bir müşteri gibi soru sorup deneyin.</p></div></div><span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm">Canlı</span></div><div class="bg-surface-container-lowest/90 rounded-xl p-space-md space-y-3 min-h-[340px] flex flex-col shadow-inner"><div id="testSohbet" class="space-y-3 overflow-y-auto flex-1 max-h-[380px]"><div class="flex items-center justify-center"><span class="font-label-sm text-label-sm text-outline px-2.5 py-0.5 rounded-full bg-surface-container-high">Test sohbeti</span></div><div class="text-center font-body-sm text-body-sm text-outline py-6">Müşteri gözünden denemek için<br>aşağıya bir soru yazın 👇</div></div><div class="pt-2 border-t border-surface-container-high/40"><div class="relative flex items-center"><input class="w-full bg-surface-container text-on-surface font-body-md text-body-md px-3.5 py-2.5 pr-20 rounded-xl focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" id="testInput" placeholder="Örn: İadeyi nasıl yapabilirim?" type="text" onkeydown="if(event.key==='Enter')testEt()"/><button onclick="testEt()" id="testBtn" class="absolute right-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary/90 transition-all flex items-center gap-1" type="button"><span>Sor</span><span class="material-symbols-outlined text-[16px]">send</span></button></div><div class="flex items-center gap-1.5 pt-2 flex-wrap"><span class="font-label-sm text-label-sm text-outline">Hızlı Deneyin:</span><span id="hizliSorular" class="flex gap-1.5 flex-wrap"></span></div></div></div></div>
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span><span id="altDurum">Asistanınız güncel ve müşterilerinize yardım etmeye hazır.</span></div><a href="/" class="text-primary hover:underline font-label-md text-label-md">Siteyi Görüntüle</a></div></div></div></div></div>
+</main></div>
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 z-50 flex items-center gap-2 px-5 py-3 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md shadow-2xl"><span class="material-symbols-outlined text-primary text-[18px]">check_circle</span><span id="toastMetin"></span></div>
+<script>
+/* ===== NOKTA IZGARASI (ana sayfayla aynı) ===== */
+(function() {
+  const cv = document.getElementById("noktaZemin");
+  const ctx = cv.getContext("2d");
+  const ARALIK = 30;
+  let W = 0, H = 0, noktalar = [];
+  const dalgalar = [];
+  const fare = { x: -9999, y: -9999 };
+  let ton = 230;
+  function olcut() {
+    W = cv.width = window.innerWidth; H = cv.height = window.innerHeight;
+    noktalar = [];
+    for (let y = ARALIK / 2; y < H; y += ARALIK)
+      for (let x = ARALIK / 2; x < W; x += ARALIK)
+        noktalar.push({ x, y, p: Math.random() * 6.283 });
+  }
+  window.addEventListener("resize", olcut); olcut();
+  window.addEventListener("pointermove", e => { fare.x = e.clientX; fare.y = e.clientY; });
+  setInterval(() => {
+    if (document.hidden) return;
+    dalgalar.push({ x: Math.random() * W, y: Math.random() * H, r: 0, max: 200 + Math.random() * 240, hiz: 3 });
+    if (dalgalar.length > 5) dalgalar.shift();
+  }, 3000);
+  (function ciz(t) {
+    ctx.clearRect(0, 0, W, H);
+    ton = (ton + 0.22) % 360;
+    const gece = document.documentElement.classList.contains("dark");
+    const bazRenk = gece ? "255,255,255" : "30,41,59";
+    for (const d of dalgalar) d.r += d.hiz;
+    for (let i = dalgalar.length - 1; i >= 0; i--) if (dalgalar[i].r > dalgalar[i].max) dalgalar.splice(i, 1);
+    for (const n of noktalar) {
+      let a = 0.09, renk = bazRenk, yaricap = 1.2, h = ton;
+      const fm = Math.hypot(n.x - fare.x, n.y - fare.y);
+      if (fm < 120) { const g = 1 - fm / 120; a = Math.max(a, 0.09 + g * 0.7); yaricap = 1.2 + g * 1.5; }
+      for (const d of dalgalar) {
+        const m = Math.hypot(n.x - d.x, n.y - d.y);
+        const fark = Math.abs(m - d.r);
+        if (fark < 55) {
+          const guc = Math.max(0, 1 - fark / 55) * Math.max(0, 1 - d.r / d.max);
+          if (guc > 0.03) { a = Math.min(1, a + guc); yaricap = Math.max(yaricap, 1.2 + guc * 2); h = (ton + m * 0.25) % 360; }
+        }
+      }
+      a += Math.sin(t / 900 + n.p) * 0.018;
+      ctx.beginPath(); ctx.arc(n.x, n.y, yaricap, 0, 6.283);
+      ctx.fillStyle = a > 0.25 ? `hsla(${h},100%,62%,${Math.min(1, a)})` : `rgba(${bazRenk},${Math.min(1, a)})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(ciz);
+  })(0);
+})();
+</script>
+<script>
+let tumu = [];
+let mod = "metin";
+let duzenlenenId = null;
+const ikonlar = ["schedule", "local_shipping", "payments", "quiz", "info", "support_agent"];
+
+function esc(s) { return (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+/* Bilgi metninden anlamlı örnek soru üret */
+function anlamliSoruUret(b) {
+  if (b.title && !/^soru:/i.test(b.text)) return b.title.length > 60 ? b.title.slice(0, 60) + "?" : (b.title.endsWith("?") ? b.title : b.title + "?");
+  const m = (b.text || "").toLocaleLowerCase("tr");
+  if (/iade|geri ödeme/.test(m)) return "İade koşulları nelerdir?";
+  if (/kargo|teslimat|gönderim/.test(m)) return "Siparişim kaç günde elime ulaşır?";
+  if (/saat|açığ|kapalı|çalışma|mesai|destek/.test(m)) return "Çalışma saatleriniz nedir?";
+  if (/fiyat|ücret|taksit|ödeme|indirim/.test(m)) return "Ödeme seçenekleri nelerdir?";
+  if (/telefon|iletişim|ulaş|adres|konum|e-posta/.test(m)) return "Size nasıl ulaşabilirim?";
+  if (/garanti/.test(m)) return "Garanti koşullarınız nedir?";
+  if (/üyelik|kayıt|hesap/.test(m)) return "Üyelik nasıl oluşturulur?";
+  if (/randevu|rezervasyon/.test(m)) return "Nasıl randevu alabilirim?";
+  if (/sipariş|satın al/.test(m)) return "Nasıl sipariş verebilirim?";
+  return "";
+}
+
+/* ===== AÇIK / KOYU MOD ===== */
+function temaDegistir() {
+  const karanlik = document.documentElement.classList.contains("dark");
+  document.documentElement.classList.toggle("dark", !karanlik);
+  try { localStorage.setItem("ba_tema", karanlik ? "light" : "dark"); } catch (e) {}
+  temaIkonGuncelle();
+}
+function temaIkonGuncelle() {
+  const el = document.getElementById("temaIkon");
+  if (el) el.textContent = document.documentElement.classList.contains("dark") ? "light_mode" : "dark_mode";
+}
+temaIkonGuncelle();
+
+function toast(m) {
+  document.getElementById("toastMetin").textContent = m;
+  const t = document.getElementById("toast");
+  t.classList.add("toast-goster");
+  clearTimeout(t._z);
+  t._z = setTimeout(() => t.classList.remove("toast-goster"), 2400);
+}
+
+function bolumeGit(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function modDegistir(m) {
+  mod = m;
+  const metinBtn = document.getElementById("sekmeMetin");
+  const soruBtn = document.getElementById("sekmeSoru");
+  const soruAlani = document.getElementById("soruAlani");
+  const aktif = "px-3 py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-1.5";
+  const pasif = "px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1.5 transition-colors";
+  if (m === "soru") {
+    soruBtn.className = aktif; metinBtn.className = pasif;
+    soruAlani.classList.remove("hidden");
+    document.getElementById("aciklamaEtiket").textContent = "Cevap (asistanın vereceği yanıt)";
+  } else {
+    metinBtn.className = aktif; soruBtn.className = pasif;
+    soruAlani.classList.add("hidden");
+    document.getElementById("aciklamaEtiket").textContent = "Bilgi veya Açıklama";
+  }
+}
+
+async function durum() {
+  try {
+    const r = await fetch("/api/durum").then(x => x.json());
+    const etiket = r.chatgptBagli ? "ChatGPT • " + r.model : "Yerel mod • Yayında";
+    document.getElementById("baslikModel").textContent = etiket;
+    document.getElementById("modDurum").textContent = r.chatgptBagli ? "Yapay zekâ aktif" : "Çevrimiçi";
+    document.getElementById("altDurum").textContent = r.chatgptBagli
+      ? "Asistanınız ChatGPT ile güncel ve müşterilerinize yardım etmeye hazır."
+      : "Asistanınız güncel ve müşterilerinize yardım etmeye hazır.";
+  } catch {}
+}
+
+async function yenile() {
+  const r = await fetch("/api/bilgiler").then(x => x.json()).catch(() => ({ bilgiler: [] }));
+  tumu = r.bilgiler || [];
+  document.getElementById("menuSayi").textContent = tumu.length;
+  document.getElementById("bilgiSayi").textContent = tumu.length + " kayıt";
+  document.getElementById("ustSayi").textContent = tumu.length + " kayıt";
+  document.getElementById("listeBaslik").textContent = "Asistanın Bildiği Konular (" + tumu.length + " Kayıt)";
+  document.getElementById("listeSayi").textContent = "Toplam " + tumu.length + " aktif bilgi";
+  const sorular = [];
+  for (const b of tumu) {
+    const s = anlamliSoruUret(b);
+    if (s && !sorular.includes(s)) sorular.push(s);
+    if (sorular.length >= 3) break;
+  }
+  while (sorular.length < 3) {
+    const yedek = ["Çalışma saatleriniz nedir?", "İade koşulları nelerdir?", "Nasıl sipariş verebilirim?"];
+    const e = yedek.find(y => !sorular.includes(y));
+    if (!e) break;
+    sorular.push(e);
+  }
+  document.getElementById("hizliSorular").innerHTML = sorular.map(s =>
+    `<button onclick="hizliDene(this)" class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm transition-colors" type="button">${esc(s)}</button>`
+  ).join("");
+  listele();
+}
+
+function listele() {
+  const q = (document.getElementById("arama").value || "").toLocaleLowerCase("tr");
+  const liste = tumu.filter(b => (b.text + " " + (b.title || "")).toLocaleLowerCase("tr").includes(q));
+  const k = document.getElementById("kayitlar");
+  if (!liste.length) {
+    k.innerHTML = '<div class="text-center font-body-sm text-body-sm text-outline py-8">Kayıt bulunamadı. Yukarıdaki formdan ekleyin 👆</div>';
+    return;
+  }
+  k.innerHTML = liste.map((b, i) => {
+    const baslik = b.title || (b.text.length > 55 ? b.text.slice(0, 55) + "…" : b.text);
+    const ozet = b.title ? b.text : (b.text.length > 90 ? b.text.slice(0, 90) + "…" : b.text);
+    return `<div class="p-3 rounded-xl bg-surface-container/60 hover:bg-surface-container/90 transition-colors flex items-center justify-between gap-space-md msg-in">
+      <div class="flex items-start gap-3 min-w-0">
+        <div class="w-9 h-9 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0 mt-0.5"><span class="material-symbols-outlined text-[20px]">${ikonlar[i % ikonlar.length]}</span></div>
+        <div class="min-w-0"><p class="font-label-md text-label-md text-on-surface font-semibold truncate">${esc(baslik)}</p><p class="font-body-sm text-body-sm text-on-surface-variant truncate">${esc(ozet)}</p></div>
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        <button onclick="duzenle('${b.id}')" class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Düzenle" type="button"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+        <button onclick="sil('${b.id}')" class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container-high transition-colors" title="Sil" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+      </div></div>`;
+  }).join("");
+}
+
+async function kaydet() {
+  const metin = document.getElementById("bilgiMetin").value.trim();
+  if (!metin) { toast("Önce bilgi metnini yazın"); return; }
+  let text = metin, title = "";
+  if (mod === "soru") {
+    const soru = document.getElementById("soruBaslik").value.trim();
+    if (!soru) { toast("Soruyu da yazın"); return; }
+    title = soru; text = "Soru: " + soru + "\nCevap: " + metin;
+  }
+  const btn = document.getElementById("ekleBtn");
+  btn.disabled = true;
+  try {
+    let r;
+    if (duzenlenenId) {
+      r = await fetch("/api/bilgiler/" + duzenlenenId, {
+        method: "PUT", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text, title })
+      }).then(x => x.json());
+    } else {
+      r = await fetch("/api/bilgiler", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text, title })
+      }).then(x => x.json());
+    }
+    if (r.hata) { toast(r.hata); return; }
+    document.getElementById("bilgiMetin").value = "";
+    document.getElementById("soruBaslik").value = "";
+    duzenlenenId = null;
+    document.getElementById("ekleBtnYazi").textContent = "Bu Bilgiyi Ekle";
+    document.getElementById("formIpucu").textContent = "Bu bilgi kaydedildiğinde asistan tarafından anında öğrenilir.";
+    await yenile();
+    toast("Bilgi kaydedildi ve yayınlandı");
+  } catch { toast("Sunucuya ulaşılamadı"); }
+  btn.disabled = false;
+}
+
+function duzenle(id) {
+  const b = tumu.find(x => x.id === id);
+  if (!b) return;
+  duzenlenenId = id;
+  if (b.title) {
+    modDegistir("soru");
+    document.getElementById("soruBaslik").value = b.title;
+    document.getElementById("bilgiMetin").value = b.text.replace(/^Soru:.*\nCevap:\s?/s, "");
+  } else {
+    modDegistir("metin");
+    document.getElementById("bilgiMetin").value = b.text;
+  }
+  document.getElementById("ekleBtnYazi").textContent = "Değişikliği Kaydet";
+  document.getElementById("formIpucu").textContent = "Düzenleme modundasınız — kaydetmek için butona basın.";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+async function sil(id) {
+  if (!confirm("Bu kayıt silinsin mi?")) return;
+  await fetch("/api/bilgiler/" + id, { method: "DELETE" });
+  await yenile();
+  toast("Kayıt silindi");
+}
+
+function hizliDene(btn) {
+  document.getElementById("testInput").value = btn.textContent.trim();
+  testEt();
+}
+
+function testBalon(kim, icerik) {
+  const alan = document.getElementById("testSohbet");
+  alan.querySelector(".text-center")?.remove();
+  const d = document.createElement("div");
+  if (kim === "k") {
+    d.className = "flex justify-end msg-in";
+    d.innerHTML = '<div class="max-w-[85%] bg-primary-container/20 text-on-surface p-3 rounded-xl rounded-tr-none"><p class="font-body-md text-body-md"></p></div>';
+    d.querySelector("p").textContent = icerik;
+  } else {
+    d.className = "flex justify-start msg-in";
+    d.innerHTML = `<div class="max-w-[90%] bg-surface-container-high text-on-surface p-3 rounded-xl rounded-tl-none space-y-2 shadow-sm">
+      <div class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold"><span class="material-symbols-outlined text-[15px]">smart_toy</span>Asistan</div>
+      <p class="font-body-md text-body-md leading-relaxed"></p></div>`;
+    d.querySelector("p").textContent = icerik;
+  }
+  alan.appendChild(d);
+  alan.scrollTop = alan.scrollHeight;
+  return d;
+}
+
+async function testEt() {
+  const alan = document.getElementById("testInput");
+  const metin = alan.value.trim();
+  if (!metin) return;
+  testBalon("k", metin);
+  alan.value = "";
+  const btn = document.getElementById("testBtn");
+  btn.disabled = true;
+  const bekle = testBalon("a", "");
+  bekle.querySelector("p").innerHTML = '<span class="yaziyor flex gap-1"><i></i><i></i><i></i></span>';
+  try {
+    const r = await fetch("/api/sor", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ soru: metin })
+    }).then(x => x.json());
+    bekle.querySelector("p").textContent = r.cevap || r.hata || "Hata oluştu.";
+  } catch {
+    bekle.querySelector("p").textContent = "Sunucuya ulaşılamadı.";
+  }
+  btn.disabled = false;
+}
+
+document.getElementById("bilgiMetin").addEventListener("keydown", e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === "Enter") kaydet();
+});
+
+yenile();
+durum();
+</script></main></div></body></html>
